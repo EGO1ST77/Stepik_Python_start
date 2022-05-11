@@ -6,29 +6,42 @@
 поэтому удаление всех этих комментариев никак не навредит им. Помогите писцу Ибсену удалить все комментарии из программы.
 
 Формат входных данных
-На первой строке вводится символ решётки и сразу же натуральное число nn — количество строк в программе,
-не считая первой. Далее следует nn строк кода.
+На первой строке вводится символ решётки и сразу же натуральное число n — количество строк в программе,
+не считая первой. Далее следует n строк кода.
 
 Формат выходных данных
 Нужно вывести те же строки, но удалить комментарии и символы пустого пространства в конце строк.
 Пустую строку вместо первой строки ввода выводить не надо.
 '''
+# s = input().split('#')
+# s1 = s.pop(1)
+# s1 = int(s1)
+# code = []
+# code_new = []
+# for i in range(2, s1-1):
+#     code.append(input())
+# print()
+# for i in range(s1):
+#     x = code.index('#')
+#     for j in code:
+#         if code[j] == x:
+#             code_new.append(code[::j])
+#         else:
+#            code_new.append(j)
+# print(*code_new, sep='\n')
+
 s = input().split('#')
-s1 = s.pop(1)
-s1 = int(s1)
-code = []
-code_new = []
-for i in range(2, s1-1):
-    code.append(input())
-print()
-for i in range(s1):
-    x = code.index('#')
-    for j in code:
-        if code[j] == x:
-            code_new.append(code[::j])
-        else:
-            code_new.append(j)
+n = int(s[1])
+words = []
+
+for i in range(n):
+    r = input().split('#')
+    words.append(r[0].rstrip())
+
+print(*words, sep='\n')
 
 
-print(*code_new, sep='\n')
+
+
+
 

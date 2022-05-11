@@ -6,7 +6,7 @@ def suma_integer(integer):
     while integer != 0:
         suma += integer % 10
         integer = integer // 10
-    print("Summa = ", suma)
+    print("Suma = ", suma)
 
 
 int_input = int(input("Ввести число, чем больше, тем лучше : "))
